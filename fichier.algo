@@ -1,0 +1,198 @@
+ALGORITHM ex1
+VAR
+    phrase:string
+    nb:INTEGER 0
+BEGIN
+FOR i FROM 0 TO phrase.lenght STEP 1  DO
+    IF (phrase[i]==" ") THEN
+        nb:=nb+1
+    END_IF
+    END_FOR
+    ecrire(voici le nombre des mots,nb)
+END
+ALGORITHM ex2
+VAR
+    phrase:string
+    nb:INTEGER
+    ph:=phrase.tolowercase
+BEGIN
+    FOR i FROM 0 TO ph.lenght STEP 1  DO
+        IF (ph[i] in ["a","e","u","i","o","y"]) THEN
+            nb:=nb+1
+        END_IF
+    END_FOR
+    ecrire(voici le nombre des voyelle,nb)
+END
+/*Écrire  un algorithme  qui permet  d’afficher le message Bonjour.
+Écrire  un algorithme  permettant de saisir deux nombres et d'afficher leur produit.
+Écrire  un algorithme  qui  permet d'échange le contenu de deux entiers  A et B  saisis par l'utilisateur. et afficher ces entiers  après l’échange
+Écrire un algorithme  qui  permet d'afficher si un nombre  entier saisi au  clavier est pair ou impair.
+Écrire un algorithme   qui permet d'afficher le plus grand de trois entiers saisis  au clavier.
+Écrire un algorithme   qui permet d'évaluer  une note saisi au  clavier ( si la note supérieur à 10 alors il affiche validé sinon non validé  (NB: la note comprise entre 0 et 20 ).
+Écrire un algorithme  qui demande deux nombres m et n à l’utilisateur et l’informe ensuite si le produit de ces deux nombres est positif ou négatif. On inclut dans le programme le cas où le produit peut être nul.
+Écrire un algorithme  qui permet de calculer la valeur absolue d'un entier saisi  par l'utilisateur*/
+
+ALGORITHM bonjour
+VAR
+    
+BEGIN
+    
+lire (bonjour)
+END
+
+
+ALGORITHM produit
+VAR
+    x:INTEGER
+    y:INTEGER
+    z:INTEGER
+BEGIN
+    ecrire(donne x)
+    lire (x)
+    ecrire(donne y)
+    lire(y)
+    z:=x*y
+    lire(voici la resultat,z)
+END
+
+ALGORITHM echange
+VAR
+    x:INTEGER
+    y:INTEGER
+    z:INTEGER
+BEGIN
+    ecrire(donner x)
+    lire(x)
+    x:=z
+    ecrire(donner y)
+    lire(y)
+    y:=x
+    x:=y 
+END
+
+ALGORITHM paire
+VAR
+    x:INTEGER
+BEGIN
+    ecrire(donner un nobmre )
+    lire (le nobmre, x)
+    
+    IF (x/2==0) THEN
+        ecrire(votre nombre est paire)
+    ELSE
+        ecrire(votre nobre est impaire)
+    END_IF
+END
+
+
+ALGORITHM bigest
+VAR
+    x:INTEGER
+    y:INTEGER
+    z:INTEGER
+BEGIN
+    ecrire(donner le num1)
+    lire(x)
+    ecrire(donner le num2)
+    lire(y)
+    ecrire(donner le num3)
+    lire(z)
+    IF (x>y && x>z ) THEN
+        ecrire(x)
+    ELSE_IF (y>x && y>z) THEN
+        ecrire(y)
+    ELSE
+        ecrire(z)
+    END_IF
+END
+
+
+ALGORITHM note
+VAR
+    x:INTEGER
+    
+BEGIN
+    ecrire(donner votre note)
+    lire(la note , x)
+    IF (x>0 && x<10) THEN
+        ecrire(non valide)
+    ELSE_IF (x=>10 && x=<20) THEN
+        ecrire(valide)
+    ELSE
+        ecrire(donner votre note /20)
+    END_IF
+END
+
+ALGORITHM test
+VAR
+    m:INTEGER
+    n:INTEGER
+BEGIN
+    ecrire(donner m)
+    lire(m)
+    ecrire(n)
+    lire(n)
+    IF (m*n<0) THEN
+        ecrire(negatif)
+    ELSE_IF (m*n>0) THEN
+        ecrire(positif)
+    ELSE
+        IF (m=0 || n=0) THEN
+            ecrire(null)
+        END_IF
+    END_IF
+END
+
+ALGORITHM valeur
+VAR
+    x:INTEGER
+    y:INTEGER
+BEGIN
+    ecrire(donner x un nombre negatif)
+    lire(x)
+    y:=-1
+    IF (x*y>0) THEN
+        ecrire(x)
+    END_IF
+END
+
+
+ALGORITHM domme
+VAR
+    x:INTEGER
+    y:INTEGER
+    z:INTEGER
+BEGIN
+    ecrire(donner un nombre,x )
+    lire(x)
+    ecrire(ajouter un nombre, y)
+    lire(y)
+    z=x+y
+     FOR i FROM 1 TO n STEP ++ DO
+REPEAT
+    ecrire(ajouter un num, n )
+    z=z+n
+    lire(z)
+UNTIL (n=0)
+    ecrire(donner un nomrbe sauf 0)
+     END_FOR
+END
+
+
+ALGORITHM bonjour
+VAR
+    
+BEGIN
+FOR i FROM 0 TO 9 STEP ++  DO
+    ecrire(bonjour)
+END_FOR
+END
+
+ALGORITHM test
+VAR
+    x:INTEGER
+BEGIN 
+    FOR i FROM 1 TO 10 STEP ++  DO
+        x=1
+    END_FOR
+END
